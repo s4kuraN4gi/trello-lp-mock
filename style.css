@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0052cc;
+    color: #fff;
+}
+
+/* ロゴ */
+header .logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* ナビメニュー */
+header nav ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+/* 無料で始めるボタン */
+header button{
+    background: #fff;
+    color: #0052cc;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ヒーローセクション */
+.hero{
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #f4f4f4;
+}
+
+.hero h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero img{
+    max-width: 80%;
+    height: auto;
+}
+
+/* 特徴セクション全体 */
+.features{
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+/* 特徴カードを横並びにする */
+.feature-cards {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* 各カードのデザイン */
+.feature-cards .card {
+    background: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex: 1; /*　均等幅  */
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+/* スクリーンショットセクション */
+.screenshot {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.screenshot img{
+    max-width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+}
+
+/* 事例セクション */
+.cases {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.case-cards{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.case-cards .card{
+    background: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex: 1;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+/* フッター全体 */
+footer{
+    background: #f8f8f8;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    border-top: 1px solid #bbb;
+}
+
+/* コピーライト部分 */
+footer p{
+    margin-bottom: 1rem;
+}
+
+/* リンク横並び */
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li{
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+/* ホバー時にリンク色を青色に */
+footer ul li:hover{
+    color: #0052cc;
+}
+
+
+
+/* 768px以下の画面幅用 */
+@media (max-width: 768px){
+
+    /* ヘッダー：ナビを縦並び　or 中央寄せ */
+    header{
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    /* カード系：縦並びに変更 */
+    .feature-cards,
+    .case-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-cards .card,
+    .case-cards .card{
+        max-width: 90%;
+    }
+
+    /* Hero画像を小さく調整 */
+    .hero img{
+        max-width: 100%;
+    }
+}
